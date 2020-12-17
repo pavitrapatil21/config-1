@@ -1,0 +1,12 @@
+config:
+  consumer:
+    inclusion:
+      default: companyName,fact.*,emails.address,gender,preferredLanguageCode,vin.*,pii.dateOfBirth,dealer.*,driveDmsCustID
+      manager: fact.*,emails.address,gender,spokenLanguageCodes,preferredLanguageCode,vin.*,pii.dateOfBirth,dealer.*,driveDmsCustID
+      finance: companyName,fact.*,emails.address,gender,spokenLanguageCodes,preferredLanguageCode,vin.*,driveDmsCustID
+      userInclusion: fact.*,emails.address,gender,spokenLanguageCodes,preferredLanguageCode,vin.*,driveDmsCustID
+    exclusion:
+      default: consumerType,dataOwner,qaStamped,serviceFlexLoopCompanyId,textMe
+      manager: consumerType,dataOwner,qaStamped,serviceFlexLoopCompanyId,textMe,callMe
+      finance: consumerType,dataOwner,qaStamped,textMe,callMe
+      userExclusion: consumerType,qaStamped,textMe,callMe
